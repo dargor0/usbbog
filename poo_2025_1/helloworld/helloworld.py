@@ -6,17 +6,20 @@ Hello world example.
 """
 
 
-def do_helloworld():
+def do_helloworld(name):
     """Generate the hello world message"""
     # create a string with the message
-    output = "Hola mundo!"
+    if name == "":
+        output = "Hello Stranger, how are you?"
+    else:
+        output = f"Hello {name}, how are you?"
     return output
 
 
 def run():
     """Script entrypoint"""
     # just print to console
-    print(do_helloworld())
+    print(do_helloworld("Oscar"))
 
 
 if __name__ == "__main__":
