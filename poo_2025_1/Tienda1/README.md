@@ -44,7 +44,7 @@ Hacer un programa que maneje un inventario de una tienda.
 
 ## Requisitos mínimos
 
-* Debe usar clases e instanciar objetos de la clase definida. 
+* Debe usar clases e instanciar objetos de la clase definida. El no usar clases y objetos implicará 0.0 en el porcentaje de funcionalidad.
 
 ## Fecha máxima de entrega
 
