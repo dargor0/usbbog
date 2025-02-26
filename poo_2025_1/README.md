@@ -11,6 +11,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
     * Si usa Python como lenguaje de programación, se recomienda usar este [archivo de plantilla](template.py) para las entregas, para evitar problemas con el software de evaluación del ejercicio.
 * Opcionalmente (recomendado) debe existir uno o varios archivos de test unitario, que deben comenzar con el prefijo `test_`.
 * Debe hacer el commit de los archivos del ejercicio antes del viernes de cada semana a las 20:00 hora local Colombiana (UTC-5). Cualquier commit que involucre archivos de dicha práctica después de esta fecha límite, será ignorado para efectos de evaluación.
+* Se recomienda usar [pycodestyle](https://pypi.org/project/pycodestyle/) para revisar cumplimiento de estilo según PEP8 para cumplir con el porcentaje de buenas prácticas.
 
 ### Evaluación
 
