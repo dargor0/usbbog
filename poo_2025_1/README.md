@@ -27,7 +27,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |Número|Fecha     |Nombre |Descripción           |
 |:----:|:--------:|:-----:|:---------------------|
 |1     |2025-02-25|Tienda1|Inventario de tienda 1|
-|2     |2025-03-04|       |                      |
+|2     |2025-03-04|Tienda2|Inventario de tienda 2|
 |3     |2025-03-11|       |                      |
 |4     |2025-03-18|       |                      |
 |5     |2025-03-25|       |                      |
