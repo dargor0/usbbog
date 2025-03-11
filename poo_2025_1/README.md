@@ -26,21 +26,21 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 
 ### Cronograma
 
-|Número|Fecha     |Nombre |Descripción           |
-|:----:|:--------:|:-----:|:---------------------|
-|1     |2025-02-25|Tienda1|Inventario de tienda 1|
-|2     |2025-03-04|Tienda2|Inventario de tienda 2|
-|3     |2025-03-11|Tienda3|Inventario de tienda 3|
-|4     |2025-03-18|       |                      |
-|5     |2025-03-25|       |                      |
-|6     |2025-04-01|       |                      |
-|7     |2025-04-08|       |                      |
-|8     |2025-04-22|       |                      |
-|9     |2025-04-29|       |                      |
-|10    |2025-05-06|       |                      |
-|11    |2025-05-13|       |                      |
-|12    |2025-05-20|       |                      |
-|13    |2025-05-27|       |                      |
+|Número|Fecha     |Nombre |Descripción           |Evaluado en corte|
+|:----:|:--------:|:-----:|:---------------------|:---------------:|
+|1     |2025-02-25|Tienda1|Inventario de tienda 1|1                |
+|2     |2025-03-04|Tienda2|Inventario de tienda 2|1                |
+|3     |2025-03-11|Tienda3|Inventario de tienda 3|2                |
+|4     |2025-03-18|       |                      |                 |
+|5     |2025-03-25|       |                      |                 |
+|6     |2025-04-01|       |                      |                 |
+|7     |2025-04-08|       |                      |                 |
+|8     |2025-04-22|       |                      |                 |
+|9     |2025-04-29|       |                      |                 |
+|10    |2025-05-06|       |                      |                 |
+|11    |2025-05-13|       |                      |                 |
+|12    |2025-05-20|       |                      |                 |
+|13    |2025-05-27|       |                      |                 |
 
 ### Otros lenguajes de programación
 
