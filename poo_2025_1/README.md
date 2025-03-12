@@ -6,8 +6,9 @@ Recursos sobre el desarrollo de la asignatura.
 
 Las prácticas consisten en ejercicios propuestos por el docente, para entrega a través de github. Se requiere cumplir con los siguientes requisitos:
 
-* Cada estudiante debe crear un repositorio llamado `entregas-poo-2025-1` (usar este nombre exacto), y dentro de éste hacer subcarpetas con el nombre de la práctica a entregar.
+* Cada estudiante debe crear un repositorio llamado `entregas-poo-2025-1` (usar este nombre exacto), y dentro de éste hacer subcarpetas con el nombre exacto de la práctica a entregar.
 * Dentro de cada carpeta añadir uno o varios archivos, según las necesidades del ejercicio. De esos archivos, uno sólo debe ser el punto de entrada de su programa.
+    * Los archivos deben tener la extensión correcta (por ejemplo los archivos de Python tienen extensión `".py`). El evaluador ignorará cualquier archivo sin extensión.
     * Si usa Python como lenguaje de programación, se recomienda usar este [archivo de plantilla](template.py) para las entregas, para evitar problemas con el software de evaluación del ejercicio.
     * Si usa otro lenguaje de programación, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del lenguaje de programación usado. Esto con el fin de que el software de evaluación pueda interpretar correctamente su ejercicio. Si no lo hace, el software de evaluación asumirá que usa Python. Para más información ver la sección [Otros lenguajes de programación](#otros-lenguajes-de-programación).
     * Si usa herramientas como Google Colab o Jupyter para desarrollar en Python, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del entorno que usó. Por ejemplo si usó Google Colab, debe poner dentro del archivo `lang.txt` el texto `"colab"`.
