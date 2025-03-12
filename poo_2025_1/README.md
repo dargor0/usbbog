@@ -8,10 +8,10 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 
 * Cada estudiante debe crear un repositorio llamado `entregas-poo-2025-1` (usar este nombre exacto), y dentro de éste hacer subcarpetas con el nombre exacto de la práctica a entregar.
 * Dentro de cada carpeta añadir uno o varios archivos, según las necesidades del ejercicio. De esos archivos, uno sólo debe ser el punto de entrada de su programa.
-    * Los archivos deben tener la extensión correcta (por ejemplo los archivos de Python tienen extensión `".py`). El evaluador ignorará cualquier archivo sin extensión.
+    * Los archivos deben tener la extensión correcta (por ejemplo los archivos de Python tienen extensión `".py"`). El evaluador ignorará cualquier archivo sin extensión.
     * Si usa Python como lenguaje de programación, se recomienda usar este [archivo de plantilla](template.py) para las entregas, para evitar problemas con el software de evaluación del ejercicio.
     * Si usa otro lenguaje de programación, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del lenguaje de programación usado. Esto con el fin de que el software de evaluación pueda interpretar correctamente su ejercicio. Si no lo hace, el software de evaluación asumirá que usa Python. Para más información ver la sección [Otros lenguajes de programación](#otros-lenguajes-de-programación).
-    * Si usa herramientas como Google Colab o Jupyter para desarrollar en Python, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del entorno que usó. Por ejemplo si usó Google Colab, debe poner dentro del archivo `lang.txt` el texto `"colab"`.
+    * Si usa herramientas como Google Colab o Jupyter para desarrollar en Python, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del entorno que usó. Por ejemplo si usó Google Colab, debe poner dentro del archivo `lang.txt` el texto `colab`.
 * Opcionalmente (recomendado) debe existir uno o varios archivos de test unitario, que deben comenzar con el prefijo `test_`.
 * Debe hacer el commit de los archivos del ejercicio antes del viernes de cada semana a las 20:00 hora local Colombiana (UTC-5). Cualquier commit que involucre archivos de dicha práctica después de esta fecha límite, será ignorado para efectos de evaluación.
 * Se recomienda usar [pycodestyle](https://pypi.org/project/pycodestyle/) para revisar cumplimiento de estilo según PEP8 para cumplir con el porcentaje de buenas prácticas.
@@ -49,7 +49,7 @@ Si usa otros lenguajes de programación, debe tener en cuenta:
 
 * Debe incluir el archivo `lang.txt` en la carpeta de su taller, si no lo hace, la herramienta evaluará incorrectamente el ejercicio, y no se admitirán reclamos posteriores con respecto a la evaluación.
 * El uso de herramientas como Google Colab o Jupyter notebooks implica que se debe incluir este archivo, para notificar al evaluador de que debe hacer la conversión de archivo `".ipynb"` a `".py"`. Si no lo hace, la herramienta evaluará incorrectamente el ejercicio, y no se admitirán reclamos posteriores con respecto a la evaluación.
-    * Para uso de Google Colab, debe incluir el texto `"colab"`.
+    * Para uso de Google Colab, debe incluir el texto `colab`.
     * Para otras herramientas, debe consultarlo con el docente.
 * Detalles de lenguajes específicos:
     * `C` o `C++`: 
