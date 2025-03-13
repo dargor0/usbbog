@@ -30,8 +30,8 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |Número|Fecha      |Nombre      |Descripción               |
 |:----:|:---------:|:----------:|:-------------------------|
 |1     |2025-02-27 |Calculadora1|Prototipo de calculadora 1|
-|2     |2025-03-06 |            |                          |
-|3     |2025-03-13 |            |                          |
+|2     |2025-03-06 |            |(Sin práctica)            |
+|3     |2025-03-13 |            |(Sin práctica)            |
 |4     |2025-03-20 |            |                          |
 |5     |2025-03-27 |            |                          |
 |6     |2025-04-03 |            |                          |

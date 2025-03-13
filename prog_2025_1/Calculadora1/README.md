@@ -32,7 +32,8 @@ Hacer un programa de calculadora sencilla.
 
 ## Fecha máxima de entrega
 
-`2025-03-03T20:00:00-05:00`
+(Plazo antiguo: `2025-03-03T20:00:00-05:00`)
+**Por ahora no hay fecha definida de entrega**
 
 ### Evaluación
 
