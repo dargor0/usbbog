@@ -13,7 +13,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
     * Si usa otro lenguaje de programación, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del lenguaje de programación usado. Esto con el fin de que el software de evaluación pueda interpretar correctamente su ejercicio. Si no lo hace, el software de evaluación asumirá que usa Python. Para más información ver la sección [Otros lenguajes de programación](#otros-lenguajes-de-programación).
     * Si usa herramientas como Google Colab o Jupyter para desarrollar en Python, debe añadir en la carpeta de la práctica un archivo de texto plano llamado `lang.txt`, que debe contener una sola línea con el nombre del entorno que usó. Por ejemplo si usó Google Colab, debe poner dentro del archivo `lang.txt` el texto `colab`.
 * Opcionalmente (recomendado) debe existir uno o varios archivos de test unitario, que deben comenzar con el prefijo `test_`.
-* Debe hacer el commit de los archivos del ejercicio antes del viernes de cada semana a las 20:00 hora local Colombiana (UTC-5). Cualquier commit que involucre archivos de dicha práctica después de esta fecha límite, será ignorado para efectos de evaluación.
+* **ACTUALIZADO**: Debe hacer el commit de los archivos del ejercicio antes del lunes siguiente de cada semana a las 07:00 hora local Colombiana (UTC-5). Cualquier commit que involucre archivos de dicha práctica después de esta fecha límite, será ignorado para efectos de evaluación.
 * Se recomienda usar [pycodestyle](https://pypi.org/project/pycodestyle/) para revisar cumplimiento de estilo según PEP8 para cumplir con el porcentaje de buenas prácticas.
 
 ### Evaluación
@@ -32,7 +32,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |1     |2025-02-25|Tienda1|Inventario de tienda 1|1                |
 |2     |2025-03-04|Tienda2|Inventario de tienda 2|1                |
 |3     |2025-03-11|Tienda3|Inventario de tienda 3|2                |
-|4     |2025-03-18|       |                      |                 |
+|4     |2025-03-18|       | (sin práctica)       |                 |
 |5     |2025-03-25|       |                      |                 |
 |6     |2025-04-01|       |                      |                 |
 |7     |2025-04-08|       |                      |                 |
