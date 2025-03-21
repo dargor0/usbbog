@@ -61,7 +61,7 @@ Extender el programa de calculadora sencilla del taller anterior.
 
 ## Fecha máxima de entrega
 
-`2025-03-24T20:00:00-05:00`
+`2025-03-31T20:00:00-05:00`
 
 ### Evaluación
 
