@@ -27,21 +27,21 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 
 ### Cronograma
 
-|Número|Fecha     |Nombre |Descripción           |Evaluado en corte|
-|:----:|:--------:|:-----:|:---------------------|:---------------:|
-|1     |2025-02-25|Tienda1|Inventario de tienda 1|1                |
-|2     |2025-03-04|Tienda2|Inventario de tienda 2|1                |
-|3     |2025-03-11|Tienda3|Inventario de tienda 3|2                |
-|4     |2025-03-18|       | (sin práctica)       |                 |
-|5     |2025-03-25|       |                      |                 |
-|6     |2025-04-01|       |                      |                 |
-|7     |2025-04-08|       |                      |                 |
-|8     |2025-04-22|       |                      |                 |
-|9     |2025-04-29|       |                      |                 |
-|10    |2025-05-06|       |                      |                 |
-|11    |2025-05-13|       |                      |                 |
-|12    |2025-05-20|       |                      |                 |
-|13    |2025-05-27|       |                      |                 |
+|Número|Fecha     |Nombre                          |Descripción                 |Evaluado en corte|
+|:----:|:--------:|:------------------------------:|:---------------------------|:---------------:|
+|1     |2025-02-25|[Tienda1](Tienda1/README.md)    |Inventario de tienda 1      |1                |
+|2     |2025-03-04|[Tienda2](Tienda2/README.md)    |Inventario de tienda 2      |1                |
+|3     |2025-03-11|[Tienda3](Tienda3/README.md)    |Inventario de tienda 3      |2                |
+|-     |2025-03-18|                                | (sin práctica)             |                 |
+|4     |2025-03-25|[Mascotas1](Mascotas1/README.md)|Mascotas en el veterinario 1|2                |
+|5     |2025-04-01|                                |                            |                 |
+|6     |2025-04-08|                                |                            |                 |
+|7     |2025-04-22|                                |                            |                 |
+|8     |2025-04-29|                                |                            |                 |
+|9     |2025-05-06|                                |                            |                 |
+|10    |2025-05-13|                                |                            |                 |
+|11    |2025-05-20|                                |                            |                 |
+|12    |2025-05-27|                                |                            |                 |
 
 ### Otros lenguajes de programación
 
