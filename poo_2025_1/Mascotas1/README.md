@@ -46,10 +46,10 @@ Hacer un programa que permita el manejo de mascotas en una veterinaria.
 > de que raza es 'Kity'?
 < siames
 > Resumen:
-> |Clase |Nombre   |Edad   |Raza         |
-> |Perro |Motas    |1 años |Doberman     |
-> |Perro |Firulais |3 años |Pastor Aleman|
-> |Gato  |Kity     |4 años |Siames       |
+> |Clase |Nombre   |Edad   |Raza         |Fecha de ingreso          |
+> |Perro |Motas    |1 años |Doberman     |2025-03-25T13:14:26-05:00 |
+> |Perro |Firulais |3 años |Pastor Aleman|2025-03-25T13:14:59-05:00 |
+> |Gato  |Kity     |4 años |Siames       |2025-03-25T13:15:15-05:00 |
 ```
 
 ## Requisitos mínimos
