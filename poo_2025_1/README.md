@@ -34,7 +34,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |3     |2025-03-11|[Tienda3](Tienda3/README.md)    |Inventario de tienda 3      |2                |
 |-     |2025-03-18|                                | (sin práctica)             |                 |
 |4     |2025-03-25|[Mascotas1](Mascotas1/README.md)|Mascotas en el veterinario 1|2                |
-|5     |2025-04-01|                                |                            |                 |
+|-     |2025-04-01|                                | (sin práctica)             |                 |
 |6     |2025-04-08|                                |                            |                 |
 |7     |2025-04-22|                                |                            |                 |
 |8     |2025-04-29|                                |                            |                 |
