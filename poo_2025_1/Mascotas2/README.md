@@ -1,20 +1,15 @@
-# Práctica de clase: Mascotas1
+# Práctica de clase: Mascotas2
 
 ## Descripción
 
-Hacer un programa que permita el manejo de mascotas en una veterinaria.
+Basados en el programa de manejo de mascotas en una veterinaria, del taller anterior ( [Mascotas1](../Mascotas1/README.md) ), extender la funcionalidad por medio de herencia múltiple.
 
-1. Haga una clase Mascota y ponga los atributos y métodos que considere necesarios.
-2. Haga dos clases derivadas de Mascota: Perro y Gato
-3. Haga una interfaz que permita ingresar los datos de la mascota. Los datos mínimos son:
-
-    * Clase (perro o gato)
-    * Nombre
-    * Edad
-    * Raza
-
-4. Cada vez que ingrese un dato, debe registrar la fecha y hora de ingreso, tomando como fecha y hora la actual.
-5. Muestre en pantalla los datos de todas las mascotas ingresadas.
+1. Haga una clase Visualizador, que permita imprimir en pantalla el resumen del objeto (clase, nombre, etc.)
+    * Haga un método llamado `resumen` que haga esta tarea.
+2. Modifique la definición de las clases ya creadas (Mascota, Perro, Gato), para que también incluyan como clase base a Visualizador.
+    * **NO** modifique el contenido de las clases ya creadas (Mascota, Perro, Gato).
+3. En el resumen en pantalla usar el método `resumen` de la clase Visualizador.
+4. Mantenga la misma interfaz de ingreso de datos.
 
 ## Ejemplo de interacción
 
@@ -55,10 +50,11 @@ Hacer un programa que permita el manejo de mascotas en una veterinaria.
 ## Requisitos mínimos
 
 * Debe usar al menos una clase base y clases derivadas, también debe instanciar objetos de las clases derivadas definidas en el programa. El no usar clases y objetos implicará 0.0 en el porcentaje de funcionalidad.
+* Debe existir una clase llamada `Visualizador`, con un método llamado `resumen`, y que debe usarse para la generación del resumen (se detectarán los llamados a este método). El no cumplir con estas condiciones implicará 0.0 en el porcentaje de funcionalidad.
 
 ## Fecha máxima de entrega
 
-(Plazo antiguo: `2025-03-31T07:00:00-05:00`) **Se extiende el plazo de entrega a `2025-04-23T07:00:00-05:00`**
+`2025-04-28T07:00:00-05:00`
 
 ### Evaluación
 
@@ -68,5 +64,3 @@ Hacer un programa que permita el manejo de mascotas en una veterinaria.
 |30%       |Funcionalidad   |Cumplimiento de la funcionalidad del programa                               |
 |30%       |Buenas prácticas|Revisión de PEP8, existencia de docstrings y comentarios útiles en el código|
 |10%       |Tests unitarios |Existencia de al menos un test unitario funcional y que reporte OK          |
-
-

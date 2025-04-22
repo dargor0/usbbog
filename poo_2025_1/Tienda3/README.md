@@ -66,7 +66,7 @@ Extender el programa que maneje un inventario de una tienda, con nuevas funciona
 
 ## Fecha máxima de entrega
 
-(Plazo antiguo: `2025-03-14T20:00:00-05:00`) **Se extiende el plazo de entrega a `2025-03-24T07:00:00-05:00`**
+(Plazo antiguo: `2025-03-14T20:00:00-05:00`) **Se extiende el plazo de entrega a `2025-04-23T07:00:00-05:00`**
 
 ### Evaluación
 
