@@ -33,14 +33,14 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |-     |2025-03-06 |                                      |(Sin práctica)            |                 |
 |-     |2025-03-13 |                                      |(Sin práctica)            |                 |
 |2     |2025-03-20 |[Calculadora2](Calculadora2/README.md)|Prototipo de calculadora 2|2                |
-|3     |2025-03-27 |[Texto1](Texto1/README.md)            |Transformador de texto 1  |2                |
-|4     |2025-04-03 |                                      |                          |                 |
-|5     |2025-04-10 |                                      |                          |                 |
-|6     |2025-04-24 |                                      |                          |                 |
-|7     |2025-05-08 |                                      |                          |                 |
-|8     |2025-05-15 |                                      |                          |                 |
-|9     |2025-05-22 |                                      |                          |                 |
-|10    |2025-05-29 |                                      |                          |                 |
+|-     |2025-03-27 |                                      |(Sin práctica)            |                 |
+|-     |2025-04-03 |                                      |(Sin práctica)            |                 |
+|-     |2025-04-10 |                                      |(Sin práctica)            |                 |
+|3     |2025-04-24 |[Texto1](Texto1/README.md)            |Transformador de texto 1  |3                |
+|4     |2025-05-08 |                                      |                          |                 |
+|5     |2025-05-15 |                                      |                          |                 |
+|6     |2025-05-22 |                                      |                          |                 |
+|7     |2025-05-29 |                                      |                          |                 |
 
 
 ### Otros lenguajes de programación

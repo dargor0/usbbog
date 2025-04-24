@@ -33,8 +33,8 @@ Hacer un programa de calculadora sencilla.
 ## Fecha máxima de entrega
 
 (Plazo antiguo: `2025-03-03T20:00:00-05:00`) 
-* Simulacro de evaluación: `2025-03-24T20:00:00-05:00`
-* Evaluacion definitiva: `2025-03-31T20:00:00-05:00`
+* Simulacro de evaluación: `2025-04-21T20:00:00-05:00`
+* Evaluacion definitiva: `2025-04-24T23:00:00-05:00` (sujeto a solicitud de recalificación).
 
 ### Evaluación
 

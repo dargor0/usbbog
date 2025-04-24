@@ -61,7 +61,9 @@ Extender el programa de calculadora sencilla del taller anterior.
 
 ## Fecha máxima de entrega
 
-`2025-03-31T20:00:00-05:00`
+(Plazo antiguo: `2025-03-31T20:00:00-05:00`)
+* Simulacro de evaluación: `2025-04-21T20:00:00-05:00`
+* Evaluacion definitiva: `2025-04-24T23:00:00-05:00` (sujeto a solicitud de recalificación).
 
 ### Evaluación
 
