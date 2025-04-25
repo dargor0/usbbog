@@ -16,6 +16,8 @@ Hacer un programa que haga cambios en un texto introducido.
 4. Mostrar el resultado en pantalla.
 5. No permita volver a ingresar otra línea de texto, para eso el programa debe terminar.
 
+Pueden consultar la lista de operaciones de strings en este [enlace](https://www.digitalocean.com/community/tutorials/python-string-functions).
+
 ## Ejemplo de interacción
 
 ```
@@ -66,7 +68,7 @@ Hacer un programa que haga cambios en un texto introducido.
 ## Fecha máxima de entrega
 
 (Plazo antiguo: `2025-04-07T20:00:00-05:00`) 
-* Nuevo plazo `2025-04-28T20:00:00-05:00`.
+* Nuevo plazo `2025-05-05T20:00:00-05:00`.
 
 ### Evaluación
 
