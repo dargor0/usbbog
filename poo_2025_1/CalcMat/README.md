@@ -49,7 +49,7 @@ Desarrollar un programa sencillo de calculadora de matrices
 
 ## Fecha máxima de entrega
 
-`2025-05-05T07:00:00-05:00`
+(Plazo antiguo: `2025-05-05T07:00:00-05:00`) Plazo extendido: `2025-05-13T07:00:00-05:00`
 
 ### Evaluación
 

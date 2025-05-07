@@ -38,7 +38,7 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |-     |2025-04-08|                                | (sin práctica)             |                 |
 |6     |2025-04-22|[Mascotas2](Mascotas2/README.md)|Mascotas en el veterinario 2|3                |
 |7     |2025-04-29|[CalcMat](CalcMat/README.md)    |Calculadora de matrices     |3                |
-|8     |2025-05-06|                                |                            |                 |
+|-     |2025-05-06|                                | (sin práctica)             |                 |
 |9     |2025-05-13|                                |                            |                 |
 |10    |2025-05-20|                                |                            |                 |
 |11    |2025-05-27|                                |                            |                 |
