@@ -37,10 +37,10 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 |-     |2025-04-03 |                                      |(Sin práctica)            |                 |
 |-     |2025-04-10 |                                      |(Sin práctica)            |                 |
 |3     |2025-04-24 |[Texto1](Texto1/README.md)            |Transformador de texto 1  |3                |
-|4     |2025-05-08 |                                      |                          |                 |
-|5     |2025-05-15 |                                      |                          |                 |
-|6     |2025-05-22 |                                      |                          |                 |
-|7     |2025-05-29 |                                      |                          |                 |
+|-     |2025-05-08 |                                      |(Sin práctica)            |                 |
+|4     |2025-05-15 |                                      |                          |                 |
+|5     |2025-05-22 |                                      |                          |                 |
+|6     |2025-05-29 |                                      |                          |                 |
 
 
 ### Otros lenguajes de programación

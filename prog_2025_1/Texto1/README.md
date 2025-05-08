@@ -68,7 +68,7 @@ Pueden consultar la lista de operaciones de strings en este [enlace](https://www
 ## Fecha máxima de entrega
 
 (Plazo antiguo: `2025-04-07T20:00:00-05:00`) 
-* Nuevo plazo `2025-05-05T20:00:00-05:00`.
+* Nuevo plazo `2025-05-09T20:00:00-05:00`.
 
 ### Evaluación
 
