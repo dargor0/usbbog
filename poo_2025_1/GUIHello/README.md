@@ -9,7 +9,7 @@ Desarrollar un programa sencillo que muestre un saludo usando una interfaz gráf
     * Un Entry para ingresar el dato (tenga en cuenta que va a recibir un string).
     * Un Button para realizar la acción de saludo.
     * Un Button específico para salir del programa.
-2. La acción de saludo debe tomar el texto ingresado en el cuadro de texto (widget tipo Entry), y mostrar el texto "Hola <nombre_ingresado>" usando la función `messageBox` ([Ver documentación aquí](https://git.cryptomilk.org/projects/cmocka.git/snapshot/cmocka-1.1.7.zip) ).
+2. La acción de saludo debe tomar el texto ingresado en el cuadro de texto (widget tipo Entry), y mostrar el texto "Hola <nombre_ingresado>" usando la función `messageBox` ([Ver documentación aquí](https://docs.python.org/3/library/tkinter.messagebox.html) ).
 3. El uso de `print()` es opcional, lo puede usar para hacer debug de su programa.
 4. Puede añadir cualquier elemento gráfico para "adornar" la aplicación.
 
