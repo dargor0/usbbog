@@ -27,20 +27,20 @@ Las prácticas consisten en ejercicios propuestos por el docente, para entrega a
 
 ### Cronograma
 
-|Número|Fecha      |Nombre                                |Descripción               |Evaluado en corte|
-|:----:|:---------:|:------------------------------------:|:-------------------------|:---------------:|
-|1     |2025-02-27 |[Calculadora1](Calculadora1/README.md)|Prototipo de calculadora 1|2                |
-|-     |2025-03-06 |                                      |(Sin práctica)            |                 |
-|-     |2025-03-13 |                                      |(Sin práctica)            |                 |
-|2     |2025-03-20 |[Calculadora2](Calculadora2/README.md)|Prototipo de calculadora 2|2                |
-|-     |2025-03-27 |                                      |(Sin práctica)            |                 |
-|-     |2025-04-03 |                                      |(Sin práctica)            |                 |
-|-     |2025-04-10 |                                      |(Sin práctica)            |                 |
-|3     |2025-04-24 |[Texto1](Texto1/README.md)            |Transformador de texto 1  |3                |
-|-     |2025-05-08 |                                      |(Sin práctica)            |                 |
-|4     |2025-05-15 |                                      |                          |                 |
-|5     |2025-05-22 |                                      |                          |                 |
-|6     |2025-05-29 |                                      |                          |                 |
+|Número|Fecha      |Nombre                                |Descripción                |Evaluado en corte|
+|:----:|:---------:|:------------------------------------:|:--------------------------|:---------------:|
+|1     |2025-02-27 |[Calculadora1](Calculadora1/README.md)|Prototipo de calculadora 1 |2                |
+|-     |2025-03-06 |                                      |(Sin práctica)             |                 |
+|-     |2025-03-13 |                                      |(Sin práctica)             |                 |
+|2     |2025-03-20 |[Calculadora2](Calculadora2/README.md)|Prototipo de calculadora 2 |2                |
+|-     |2025-03-27 |                                      |(Sin práctica)             |                 |
+|-     |2025-04-03 |                                      |(Sin práctica)             |                 |
+|-     |2025-04-10 |                                      |(Sin práctica)             |                 |
+|3     |2025-04-24 |[Texto1](Texto1/README.md)            |Transformador de texto 1   |3                |
+|-     |2025-05-08 |                                      |(Sin práctica)             |                 |
+|4     |2025-05-15 |[CalcFecha1](CalcFecha1/README.md)    |Calculadora de fechas 1    |3                |
+|-     |2025-05-22 |                                      |(sin práctica, en proyecto)|                 |
+|-     |2025-05-29 |                                      |(sin práctica, en proyecto)|                 |
 
 
 ### Otros lenguajes de programación
