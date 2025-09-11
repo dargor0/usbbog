@@ -80,6 +80,12 @@ void loop() {
   Serial.println("=== CALCULADORA SIMPLE ===");
   Serial.println("Escribe la operacion: + , - , * , /");
 
+  // wait for serial
+  while (Serial.available() == 0)
+  {
+    delay(500);
+  }
+
   if (Serial.available() > 0) {
     char operacion = leerOperacion(); ///< Leer operación (+, -, *, /)
 
