@@ -3,8 +3,17 @@
 """
 Demo1: Basic use of FFT with scipy
 
+Author: Oscar Diaz <odiaz@ieee.org>
+
+Requirements: This script needs Python3, numpy, scipy and matplotlib.
+    You can install these libraries on an existing Python environment with:
+
+$ pip install numpy matplotlib scipy
+
 Instructions:
 * Adjust the desired parameters (sampling_rate, duration)
+* Adjust the signal parameters (even change the signal components)
+* Run the script and see the results in a single window subplot
 """
 
 import numpy as np
@@ -28,7 +37,9 @@ frequency2 = 300    # Frequency of the second sine wave in Hz
 amp2 = 0.3          # Amplitude of the second sine wave in Hz
 
 # Please adjust the signal to your needs
+# ****
 signal = dcvalue + amp1 * np.sin(2 * np.pi * frequency1 * t) + amp2 * np.sin(2 * np.pi * frequency2 * t)
+# ****
 
 # 3. Apply FFT
 yf = fft(signal)  # Compute the FFT
