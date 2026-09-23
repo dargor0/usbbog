@@ -51,20 +51,17 @@ def sevensegdec_tb(decod_table: tuple, invert: bool = False):
 
         # run for each possible value
         for bcd_in in range(len(decod_table)):
+            # stimulus input
             bcd_tb.next = bcd_in
             yield delay(10)
             
-    @always_comb
-    def check():
-        """Verification"""
-
-        # It needs to discard first iteration
-        if now() > 0:
-            sseg_expect = decod_table[int(bcd_tb)]
-            if sseg_tb.val != sseg_expect:
-                print(f"ERROR: on ({now()}) bcd input '{bcd_tb.val}': expected differ {sseg_expect} != {sseg_tb}")
+            # output check
+            sseg_readed = int(sseg_tb.val)
+            sseg_expect = decod_table[int(bcd_tb.val)]
+            if sseg_readed != sseg_expect:
+                print(f"ERROR: on ({now()}) bcd input '{bcd_tb.val}': expected differ {sseg_expect:07b} != {sseg_readed:07b}")
             
-    # this will include uut, stimulus and check
+    # this will include uut and stimulus
     return instances()
 
 @block
@@ -124,12 +121,12 @@ def run():
     if args.table != "":
         table = read_table(args.table)
     else:
-        print(f"No table entered, put zero table by default.")
+        print("No table entered, put zero table by default.")
         table = read_table("")
 
     if args.simulation:
         # simulation
-        tb = sevensegdec_tb(args.invert, table)
+        tb = sevensegdec_tb(table, args.invert)
         tb.config_sim(trace=True)
         tb.run_sim()
         print("Simulation done.")
