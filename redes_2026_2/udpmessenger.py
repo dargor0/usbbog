@@ -177,10 +177,14 @@ class Messenger:
             return
 
         try:
-            # Resolve/validate the destination address.
-            socket.gethostbyname(ip)
-
             with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as send_socket:
+                if ip == "255.255.255.255" or ip.endswith(".255"):
+                    send_socket.setsockopt(
+                        socket.SOL_SOCKET,
+                        socket.SO_BROADCAST,
+                        1
+                    )
+
                 send_socket.sendto(
                     message.encode("utf-8"),
                     (ip, port)
