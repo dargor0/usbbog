@@ -9,7 +9,8 @@ que usan 4nec2 / xnec2c / nec2c) y extrae, para comparar con la teoria:
 
   1. Impedancia de entrada Z(f) = R + jX y frecuencia de resonancia.
   2. Coeficiente de reflexion Gamma, SWR y Return Loss (para Z0).
-  3. Patron de radiacion en los planos E y H y el HPBW (puntos de -3 dB).
+  3. Patron de radiacion: corte plano E (plano xz), corte plano H (plano xy),
+     el HPBW y el patron 3D (superficie).
   4. Directividad (integrando el patron sobre la esfera), ganancia, eficiencia
      y apertura efectiva Ae = lambda^2 G / (4 pi).
 
@@ -19,7 +20,9 @@ Uso (todos los parametros tienen valor por defecto):
     python3 simulacion_dipolo_pynec.py [opciones]
     python3 simulacion_dipolo_pynec.py -f 500 -n 21 -a 0.002 -z 75
     python3 simulacion_dipolo_pynec.py --sweep 450 550 2
-    python3 simulacion_dipolo_pynec.py -s          # mostrar en pantalla
+    python3 simulacion_dipolo_pynec.py             # patron E y H en pantalla
+    python3 simulacion_dipolo_pynec.py --3d        # ademas, el patron 3D
+    python3 simulacion_dipolo_pynec.py --images    # guardar las figuras en PNG
     python3 simulacion_dipolo_pynec.py --nec       # ademas, exportar el .nec
     MPLBACKEND=Agg python3 simulacion_dipolo_pynec.py   # sin pantalla
 
@@ -44,6 +47,7 @@ import argparse               # lectura de parametros de linea de comandos
 import numpy as np            # calculo numerico (arreglos, trigonometria)
 import matplotlib             # backend de graficacion
 import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D  # habilita la proyeccion '3d'
 from PyNEC import nec_context  # motor NEC2 (metodo de momentos)
 
 # Constante fisica
@@ -96,8 +100,8 @@ def dipolo_z(freq_mhz, longitud, seg, radio):
     nec.fr_card(0, 1, freq_mhz, 0)
 
     # Tarjeta EX: fuente de tension de 1 V (tipo 0) en el hilo 1, en el
-    # segmento central (seg//2): alimenta el dipolo en el centro.
-    nec.ex_card(0, 1, seg // 2, 0, 1.0, 0, 0, 0, 0, 0)
+    # segmento central ((seg+1)//2, con seg impar): alimenta el dipolo en el centro.
+    nec.ex_card(0, 1, (seg + 1) // 2, 0, 1.0, 0, 0, 0, 0, 0)
 
     return nec
 
@@ -182,7 +186,7 @@ def escribir_nec(nombre, f_mhz, long, radio, seg):
         f"GW 1 {seg} 0 0 {-long/2:.6f} 0 0 {long/2:.6f} {radio:.6f}",
         "GE 0",                                              # sin plano de tierra
         f"FR 0 1 {f_mhz:.1f}",                               # frecuencia [MHz]
-        f"EX 0 1 {seg//2} 0 1 0",                            # fuente 1 V al centro
+        f"EX 0 1 {(seg + 1)//2} 0 1 0",                      # fuente 1 V al centro
         "RP 0 181 1 1001 0 0 1 1",                           # patron theta 0..180
         "EN",                                                # fin del archivo
     ]
@@ -239,8 +243,10 @@ def parse_args(argv=None):
                     help='numero de puntos del patron en theta')
     ap.add_argument('--n-phi', type=int, default=72,
                     help='numero de puntos del patron en phi (para integrar D)')
-    ap.add_argument('-s', '--show', action='store_true',
-                    help='mostrar las graficas en pantalla en lugar de guardarlas')
+    ap.add_argument('--images', action='store_true',
+                    help='guardar las figuras en archivos PNG (por defecto: mostrarlas)')
+    ap.add_argument('--3d', dest='pattern3d', action='store_true',
+                    help='calcular y mostrar/guardar tambien el patron 3D')
     ap.add_argument('--nec', action='store_true',
                     help='generar el archivo .nec para 4nec2/xnec2c (por defecto: no)')
     return ap.parse_args(argv)
@@ -258,7 +264,9 @@ def main(args):
     lam = C / (f0_mhz * 1e6)                 # longitud de onda [m]
     L = args.length if args.length is not None else lam / 2
     f_min, f_max, f_step = args.sweep
-    use_screen = args.show and backend_is_interactive()
+    # Por defecto se MUESTRA en pantalla; con --images se guardan PNG.
+    # Si no hay backend interactivo, se cae a guardar en archivos (con aviso).
+    use_screen = (not args.images) and backend_is_interactive()
 
     print("=" * 66)
     print("PRACTICA TEMA 2 - SIMULACION DE UN DIPOLO (PyNEC)")
@@ -377,7 +385,44 @@ def main(args):
     if not use_screen:
         fig2.savefig('dipolo_t2_patron.png', dpi=150)
 
-    # (c) SWR en funcion de la frecuencia (marca el criterio SWR <= 2).
+    # Reticula (theta, phi) reutilizada por el plano H y el patron 3D.
+    TH = np.unique(th2); PH = np.unique(ph2)
+    Gdb = g2.reshape(len(TH), len(PH))          # ganancia [dBi] (theta x phi)
+
+    # (c) Patron 3D (superficie): solo si se pide con --3d.
+    if args.pattern3d:
+        # Cerrar el lazo en phi (phi=360 == phi=0) para que la superficie no tenga costura.
+        PHc = np.concatenate([PH, [PH[-1] + (PH[1] - PH[0])]])
+        Gdbc = np.concatenate([Gdb, Gdb[:, :1]], axis=1)
+        Rr = 10 ** ((Gdbc - gmax) / 20.0)           # radio normalizado (campo)
+        THg, PHg = np.meshgrid(np.deg2rad(TH), np.deg2rad(PHc), indexing='ij')
+        X3 = Rr * np.sin(THg) * np.cos(PHg)
+        Y3 = Rr * np.sin(THg) * np.sin(PHg)
+        Z3 = Rr * np.cos(THg)
+        fig3d = plt.figure(figsize=(7, 7))
+        ax3d = fig3d.add_subplot(111, projection='3d')
+        sf = ax3d.plot_surface(X3, Y3, Z3, rstride=1, cstride=1, cmap='viridis',
+                               linewidth=0, antialiased=True)
+        fig3d.colorbar(sf, shrink=0.6, label='ganancia [dBi]')
+        ax3d.set_xlabel('x'); ax3d.set_ylabel('y'); ax3d.set_zlabel('z')
+        ax3d.set_title('Patron 3D del dipolo (NEC2)')
+        fig3d.tight_layout()
+        if not use_screen:
+            fig3d.savefig('dipolo_t2_patron3d.png', dpi=150)
+
+    # (d) Patron en el plano H (theta=90 -> plano xy): ganancia vs phi.
+    i90 = int(np.argmin(np.abs(TH - 90)))
+    g_h = Gdb[i90, :]
+    ph_h = np.deg2rad(np.concatenate([PH, PH + 360]))
+    fig_h, ax_h = plt.subplots(figsize=(6, 6), subplot_kw={'projection': 'polar'})
+    ax_h.plot(ph_h, np.concatenate([g_h, g_h]), 'b', lw=1.5)
+    ax_h.set_ylim(g_h.min() - 2.0, g_h.max() + 1.0)
+    ax_h.set_title('Patron (dB) - plano H (theta=90)')
+    fig_h.tight_layout()
+    if not use_screen:
+        fig_h.savefig('dipolo_t2_patron_h.png', dpi=150)
+
+    # (e) SWR en funcion de la frecuencia (marca el criterio SWR <= 2).
     fig3, ax3 = plt.subplots(figsize=(8, 4))
     swr_f = np.array([gamma_swr(z, z0)[1] for z in Z])
     ax3.plot(freqs, swr_f, 'b', label=f'SWR (Z0={z0:.0f} ohm)')
@@ -389,7 +434,7 @@ def main(args):
     if not use_screen:
         fig3.savefig('dipolo_t2_swr.png', dpi=150)
 
-    # (d) Archivo .nec para 4nec2 / xnec2c (solo si se pide con --nec).
+    # (f) Archivo .nec para 4nec2 / xnec2c (solo si se pide con --nec).
     if args.nec:
         escribir_nec('dipolo_t2.nec', f0_mhz, L, radio, seg)
         print("[nec]     dipolo_t2.nec (para 4nec2 / xnec2c)")
@@ -398,15 +443,19 @@ def main(args):
     # 5) Mostrar en pantalla o guardar en archivos
     # ------------------------------------------------------------------
     if use_screen:
-        # Hay pantalla y se pidio -s/--show: mostrar las figuras.
+        # Por defecto: mostrar las figuras en pantalla.
         print("\n[figuras] mostrando en pantalla (cierre las ventanas para terminar)...")
         plt.show()
     else:
-        # Guardar en PNG (caso por defecto, o si no hay backend interactivo).
-        if args.show:
+        # Guardar en PNG (con --images, o si no hay backend interactivo).
+        if not args.images:
             print(f"\n[aviso] backend '{matplotlib.get_backend()}' no interactivo: "
                   "se guardan las figuras en archivos.")
-        print("[figuras] guardadas: dipolo_t2_impedancia.png, dipolo_t2_patron.png, dipolo_t2_swr.png")
+        guardados = ["dipolo_t2_impedancia.png", "dipolo_t2_patron.png (plano E)",
+                     "dipolo_t2_patron_h.png (plano H)", "dipolo_t2_swr.png"]
+        if args.pattern3d:
+            guardados.insert(2, "dipolo_t2_patron3d.png (3D)")
+        print("[figuras] guardadas: " + ", ".join(guardados))
         if not matplotlib.is_interactive():
             plt.close('all')
 
