@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pympacds-traffic-pipeline"
+version = "0.2.0"
+description = "Three-service pympacds pipeline: capture, analyze and apply policy"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Oscar Daniel Diaz Castillo"}]
+dependencies = ["pympacds>=0.3", "scapy>=2.5"]
+
+[project.scripts]
+traffic-sensor = "traffic_sensor:main"
+traffic-analyzer = "traffic_analyzer:main"
+traffic-guard = "traffic_guard:main"
+
+[tool.setuptools]
+py-modules = ["traffic_sensor", "traffic_analyzer", "traffic_guard", "traffic_common"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
