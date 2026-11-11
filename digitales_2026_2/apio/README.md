@@ -46,6 +46,20 @@ Resultado esperado:
 - `apio packages list --check` informa que los paquetes están en buen estado.
 - La lista de placas incluye `nexys-a7-100t` (Nexys 4 DDR).
 
+## Ajuste de drivers
+
+Para la tarjetas Nexys se requiere revisar la instalación de los drivers FTDI.
+
+
+```bat
+apio drivers install ftdi
+```
+
+En Zadig: seleccione la **interfaz 0** de la placa, elija **WinUSB**, haga clic
+en **Replace Driver**, luego desconecte y vuelva a conectar la placa.
+
+## Prueba de compilación
+
 Ejecute una prueba de compilación en un directorio nuevo y vacío:
 
 ```bat
@@ -117,7 +131,7 @@ apio drivers install ftdi
 ```
 
 En Zadig: seleccione la **interfaz 0** de la placa, elija **WinUSB**, haga clic
-en **Replace Driver** y luego desconecte y vuelva a conectar la placa.
+en **Replace Driver**, luego desconecte y vuelva a conectar la placa.
 
 Después:
 
